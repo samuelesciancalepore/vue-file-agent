@@ -36,7 +36,7 @@ class UploadHelper {
     progressCallback: ProgressFn,
     configureFn?: ConfigureFn
   ): Promise<AjaxResponse> {
-    return ajax.post(url, formData, (xhr) => {
+    return ajax.patch(url, formData, (xhr) => {
       this.addHeaders(xhr, headers);
       xhr.upload.addEventListener('progress', progressCallback, false);
       if (typeof configureFn === 'function') {
