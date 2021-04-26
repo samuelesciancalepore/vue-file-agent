@@ -158,6 +158,10 @@ class AjaxRequest {
   public put(url: string, formData: AjaxRequestData, configureFn?: ConfigureFn) {
     return this.request('PUT', url, formData, configureFn);
   }
+  
+   public patch(url: string, formData: AjaxRequestData, configureFn?: ConfigureFn) {
+    return this.request('PATCH', url, formData, configureFn);
+  }
 }
 
 export default new AjaxRequest();
